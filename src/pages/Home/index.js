@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container } from './styles'
+import { Container, ContainerText } from './styles'
 
 export default class Home extends Component {
 
@@ -28,7 +28,6 @@ export default class Home extends Component {
             phrase = 0
         }
         let h1 = document.querySelector('div h1#text')
-        console.log(h1)
         let j = 0 //Contador para verificar se a frase ja chegou no final
         const title = titles[phrase]
         const lenghtTitle = title.length
@@ -50,7 +49,9 @@ export default class Home extends Component {
         
         return (
             <Container>
-                <h1 id="text">Oi</h1>
+                <ContainerText>
+                    <h1 id="text"> </h1>
+                </ContainerText>
             </Container>
         )
     }
