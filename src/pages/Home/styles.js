@@ -8,9 +8,52 @@ export const Container = styled.div`
     width: 100%;
     height: calc(100vh - 70px);
     padding: 0 20px;
+    display: flex;
+    justify-content: center;
 
     @media(max-width: 600px) {
         background-image: url(${bgImageSmall});
+        height: calc(100vh - 55px);
+    }
+
+    img {
+        position: absolute;
+        width: 50px;
+        margin-top: 20px;
+        
+        @media (max-width: 600px) {
+            & {
+                width: 35px;
+            }
+        }
+
+        &:hover {
+            animation-name: fly;
+            animation-iteration-count: infinite;
+            animation-duration: .9s;
+        }
+
+        @keyframes fly {
+            0% {
+                margin-top: 20px;
+            }
+
+            25% {
+                margin-top: 10px;
+            }
+
+            50% {
+                margin-top: 20px;
+            }
+
+            75% {
+                margin-top: 30px;
+            }
+
+            100% {
+                opacity: 20%;
+            }
+        }
     }
 `
 
@@ -21,7 +64,7 @@ export const ContainerText = styled.div`
     height: 100%;
     justify-content: center;
 
-    h1 {
+    span {
         color: #ffffff;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-align: center;

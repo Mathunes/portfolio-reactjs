@@ -1,56 +1,58 @@
 import React, { Component } from 'react'
 import { Container, ContainerText } from './styles'
+import logo from '../../assets/icons/eagle.png'
 
 export default class Home extends Component {
 
-    deleteH1 = phrase => { //Funcao para deletar frase do dom
-        let h1 = document.querySelector('h1').innerHTML
-        let lenghtTitle = h1.length
-        let newh1 = ''
+    deleteSpan = phrase => { //Funcao para deletar frase do dom
+        let span = document.querySelector('span').innerHTML        
+        let lenghtTitle = span.length
+        let newSpan = ''
         const interval = setInterval(() => {
-            for (let i = 0; i < h1.length-1; i++) { //Criando nova frase com o h1 exceto a ultima letra
-                newh1 += h1[i]
+            for (let i = 0; i < span.length-1; i++) { //Criando nova frase com o span exceto a ultima letra
+                newSpan += span[i]
             }
-            document.querySelector('h1').innerHTML = newh1 //Substituindo o texto
-            newh1 = ''
+            document.querySelector('span').innerHTML = newSpan //Substituindo o texto
+            newSpan = ''
             lenghtTitle--
             if (lenghtTitle === 0) { //Se a frase ja foi deletada por completo, inicia a digitacao da proxima frase
                 clearInterval(interval)
-                this.typeH1(phrase + 1)
+                this.typespan(phrase + 1)
             }
-            h1 = document.querySelector('h1').innerHTML
+            span = document.querySelector('span').innerHTML
         }, 25)
     }
     
-    typeH1 = (phrase = 0) => { //Funcao para digitar frase no dom
+    typespan = (phrase = 0) => { //Funcao para digitar frase no dom
         const titles = ['Lorem ipsum', 'is simply dummy text', 'of the printing and typesetting industry.'] //Frases a serem digitadas
         if (phrase >= titles.length) {
             phrase = 0
         }
-        let h1 = document.querySelector('div h1#text')
+        let span = document.querySelector('div span#text')
         let j = 0 //Contador para verificar se a frase ja chegou no final
         const title = titles[phrase]
         const lenghtTitle = title.length
         const interval = setInterval(() => {
-            h1.innerHTML += title[j] //Adicionando letra no dom
+            span.innerHTML += title[j] //Adicionando letra no dom
             j++
-            if (j >= lenghtTitle) { //Se a frase chegou no final o intervalo e interrompido para o h1 ser deletado na funcao deleteH1
+            if (j >= lenghtTitle) { //Se a frase chegou no final o intervalo e interrompido para o span ser deletado na funcao deletespan
                 clearInterval(interval)
-                setTimeout(this.deleteH1.bind(null, phrase), 2000)
+                setTimeout(this.deleteSpan.bind(null, phrase), 2000)
             }
         }, 50)
     }
 
     componentDidMount() {
-        this.typeH1()
+        this.typespan()
     }
 
     render() {
         
         return (
             <Container>
+                <img src={logo} alt="Águia" />
                 <ContainerText>
-                    <h1 id="text"> </h1>
+                    <span id="text"> </span>
                 </ContainerText>
             </Container>
         )

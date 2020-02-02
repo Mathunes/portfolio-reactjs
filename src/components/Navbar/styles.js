@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const Container = styled.div`
     background-color: #171515;
     height: 70px;
+
+    @media (max-width: 600px) {
+        height: 55px;
+    }
 `
 
 export const NavbarContainer = styled.ul`
@@ -45,6 +49,12 @@ export const Front = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 600px) {
+        img {
+            height: 25px;
+        }
+    }
 `
 
 export const Back = styled(Front)`
@@ -54,4 +64,10 @@ export const Back = styled(Front)`
     text-transform: uppercase;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
+
+    @media (max-width: 600px) {
+        span {
+            font-size: 12px;
+        }
+    }
 `
