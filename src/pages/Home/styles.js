@@ -6,7 +6,7 @@ export const Container = styled.div`
     background: url(${bgImage}) no-repeat center center fixed;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px);
     padding: 0 20px;
 
     @media(max-width: 600px) {
@@ -27,7 +27,6 @@ export const ContainerText = styled.div`
         text-align: center;
         font-size: 36px;
         font-weight: normal;
-        padding-bottom: 50px;
 
         @media(max-width: 600px) {
             font-size: 26px;
