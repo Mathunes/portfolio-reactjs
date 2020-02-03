@@ -9,6 +9,8 @@ export const Container = styled.div`
     height: calc(100vh - 70px);
     padding: 0 20px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
     @media(max-width: 600px) {
@@ -18,12 +20,22 @@ export const Container = styled.div`
 
 `
 
+export const Logo = styled.img`
+    width: 50px;
+    margin-top: 20px;
+
+    @media (max-width: 450px) {
+        width: 40px;
+    }
+`
+
 export const ContainerText = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 100%;
     justify-content: center;
+    padding-bottom: 70px;
 
     span {
         color: #ffffff;

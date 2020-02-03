@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Container, ContainerText } from './styles'
+import { Container, ContainerText, Logo } from './styles'
 import Navbar from '../../components/Navbar'
+import eagle from '../../assets/icons/eagle.png'
 
 export default class Home extends Component {
 
@@ -60,6 +61,7 @@ export default class Home extends Component {
         
         return (
             <Container>
+                <Logo src={eagle} alt="" />
                 <ContainerText>
                     <span id="text"> </span>
                 </ContainerText>
