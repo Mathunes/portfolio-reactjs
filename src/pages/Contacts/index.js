@@ -11,9 +11,15 @@ export default class Contacts extends Component {
             <Container>
                 <h1>Contatos</h1>
                 <ContainerContacts>
-                    <img src={githubLogo} alt="Logo github" />
-                    <img src={linkedinLogo} alt="Logo linkedin" />
-                    <img src={emailLogo} alt="Icone de mensagem" />
+                    <a href="https://github.com/Mathunes" target="_blank">
+                        <img src={githubLogo} alt="Logo github" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/matheus-antunes-vieira" target="_blank">
+                        <img src={linkedinLogo} alt="Logo linkedin" />
+                    </a>
+                    <a href="mailto:matheusantunes720@gmail.com" target="_blank">
+                        <img src={emailLogo} alt="Icone de mensagem" />
+                    </a>
                 </ContainerContacts>
                 <Navbar />
             </Container>
