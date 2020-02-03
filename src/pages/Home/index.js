@@ -30,7 +30,7 @@ export default class Home extends Component {
     }
     
     typespan = (phrase = 0) => { //Funcao para digitar frase no dom
-        const titles = ['Lorem ipsum', 'is simply dummy text', 'of the printing and typesetting industry.'] //Frases a serem digitadas
+        const titles = ['Olá, bem vindo ao meu portfólio...', 'sou o Matheus...', 'desenvolvedor web.'] //Frases a serem digitadas
         if (phrase >= titles.length) {
             phrase = 0
         }
