@@ -10,78 +10,68 @@ export const Container = styled.div`
     align-items: center;
     padding: 0 20px;
 
+    @media(max-width: 600px) {
+        height: calc(100vh - 55px);
+    }
+
     p {
         color: #ffffff;
         text-align: center;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 50vw;
+
+        @media (max-width: 850px) {
+            & {
+                width: 60vw;
+            }
+        }
+
+        @media (max-width: 600px) {
+            & {
+                width: 90vw;
+                font-size: 14px;
+            }
+        }
     }
 `
 
 export const Picture = styled.img`
     width: 20vw;
     border-radius: 50%;
+    border: 4px solid #ffffff;
+
+    @media (max-width: 850px) {
+        & {
+            width: 30vw;
+        }
+    }
+
+    @media (max-width: 600px) {
+        & {
+            width: 40vw;
+        }
+    }
 `
 
 export const ImagesContainer = styled.div`
     display: flex;
-    width: 80%;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
 
     img {
         height: 5vw;
-    }
-`
-
-export const FlipContainer = styled.div`
-    width: 100%;
-    height: 5vw;
-    perspective: 1000px;
-    transition: transform 0.3s;
-
-    &:hover {
-        cursor: default;
-
-        div:first-child {
-            transform: rotateX(180deg);
+        margin: 10px;
+                
+        @media (max-width: 850px) {
+            & {
+                height: 7vw;
+            }        
         }
-    }
-`
 
-export const Flipper = styled.div`
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    position: relative;
-`
-
-export const Front = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media (max-width: 600px) {
-        img {
-            height: 25px;
-        }
-    }
-`
-
-export const Back = styled(Front)`
-    transform: rotateX(180deg);
-    background-color: #000000;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-
-    @media (max-width: 600px) {
-        span {
-            font-size: 12px;
+        @media (max-width: 500px) {
+            & {
+                height: 50px;
+            }        
         }
     }
 `
