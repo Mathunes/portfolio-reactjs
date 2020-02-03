@@ -26,19 +26,7 @@ export default class Navbar extends Component {
                             </Flipper>
                         </FlipContainer>
                     </Link>
-
-                    <Link to={process.env.PUBLIC_URL + '/about'}>
-                        <FlipContainer>
-                            <Flipper>
-                                <Front>
-                                    <img src={IconAbout} alt="Sobre" />
-                                </Front>
-                                <Back>
-                                    <span>Sobre</span>
-                                </Back>
-                            </Flipper>
-                        </FlipContainer>
-                    </Link>
+                    
 
                     <Link to={process.env.PUBLIC_URL + '/projects'}>
                         <FlipContainer>
@@ -48,6 +36,19 @@ export default class Navbar extends Component {
                                 </Front>
                                 <Back>
                                     <span>Projetos</span>
+                                </Back>
+                            </Flipper>
+                        </FlipContainer>
+                    </Link>
+
+                    <Link to={process.env.PUBLIC_URL + '/about'}>
+                        <FlipContainer>
+                            <Flipper>
+                                <Front>
+                                    <img src={IconAbout} alt="Sobre" />
+                                </Front>
+                                <Back>
+                                    <span>Sobre</span>
                                 </Back>
                             </Flipper>
                         </FlipContainer>
