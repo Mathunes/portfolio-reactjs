@@ -36,7 +36,7 @@ export const Container = styled.div`
 `
 
 export const Picture = styled.img`
-    width: 20vw;
+    width: 15vw;
     border-radius: 50%;
     border: 4px solid #ffffff;
 
