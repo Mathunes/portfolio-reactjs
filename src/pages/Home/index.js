@@ -9,22 +9,24 @@ export default class Home extends Component {
     }
 
     deleteSpan = phrase => { //Funcao para deletar frase do dom
-        let span = document.querySelector('span').innerHTML        
-        let lenghtTitle = span.length
-        let newSpan = ''
-        const interval = setInterval(() => {
-            for (let i = 0; i < span.length-1; i++) { //Criando nova frase com o span exceto a ultima letra
-                newSpan += span[i]
-            }
-            document.querySelector('span').innerHTML = newSpan //Substituindo o texto
-            newSpan = ''
-            lenghtTitle--
-            if (lenghtTitle === 0) { //Se a frase ja foi deletada por completo, inicia a digitacao da proxima frase
-                clearInterval(interval)
-                this.typespan(phrase + 1)
-            }
-            span = document.querySelector('span').innerHTML
-        }, 25)
+        if (document.querySelector('div span#text') !== null) {
+            let span = document.querySelector('div span#text').innerHTML
+            let lenghtTitle = span.length
+            let newSpan = ''
+            const interval = setInterval(() => {
+                for (let i = 0; i < span.length-1; i++) { //Criando nova frase com o span exceto a ultima letra
+                    newSpan += span[i]
+                }
+                document.querySelector('div span#text').innerHTML = newSpan //Substituindo o texto
+                newSpan = ''
+                lenghtTitle--
+                if (lenghtTitle === 0) { //Se a frase ja foi deletada por completo, inicia a digitacao da proxima frase
+                    clearInterval(interval)
+                    this.typespan(phrase + 1)
+                }
+                span = document.querySelector('div span#text').innerHTML
+            }, 25)
+        }
     }
     
     typespan = (phrase = 0) => { //Funcao para digitar frase no dom
@@ -36,6 +38,7 @@ export default class Home extends Component {
         let j = 0 //Contador para verificar se a frase ja chegou no final
         const title = titles[phrase]
         const lenghtTitle = title.length;
+
         if (span !== null) {
         this.setState({
             interval: setInterval(() => {
