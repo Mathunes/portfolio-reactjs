@@ -11,3 +11,8 @@ html, body {
 ::-webkit-scrollbar {
     width: 0;
 }
+
+::selection {
+    background-color: #ffffff;
+    color: #000000;
+}

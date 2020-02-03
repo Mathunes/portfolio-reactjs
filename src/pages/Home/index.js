@@ -18,14 +18,16 @@ export default class Home extends Component {
                 for (let i = 0; i < span.length-1; i++) { //Criando nova frase com o span exceto a ultima letra
                     newSpan += span[i]
                 }
-                document.querySelector('div span#text').innerHTML = newSpan //Substituindo o texto
-                newSpan = ''
-                lenghtTitle--
-                if (lenghtTitle === 0) { //Se a frase ja foi deletada por completo, inicia a digitacao da proxima frase
-                    clearInterval(interval)
-                    this.typespan(phrase + 1)
+                if (document.querySelector('div span#text') !== null) {
+                    document.querySelector('div span#text').innerHTML = newSpan //Substituindo o texto
+                    newSpan = ''
+                    lenghtTitle--
+                    if (lenghtTitle === 0) { //Se a frase ja foi deletada por completo, inicia a digitacao da proxima frase
+                        clearInterval(interval)
+                        this.typespan(phrase + 1)
+                    }
+                    span = document.querySelector('div span#text').innerHTML
                 }
-                span = document.querySelector('div span#text').innerHTML
             }, 25)
         }
     }
