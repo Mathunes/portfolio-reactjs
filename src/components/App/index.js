@@ -1,13 +1,11 @@
 import React from 'react';
-import Routes from '../../routes';
-import '../../styles/index.css';
-import Navbar from '../Navbar';
+import Routes from '../../routes'
+import '../../styles/index.css'
 
 function App() {
   return (
     <div className="App">
       <Routes />
-      <Navbar />
     </div>
   );
 }

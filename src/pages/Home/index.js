@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import { Container, ContainerText } from './styles'
-import logo from '../../assets/icons/eagle.png'
+import Navbar from '../../components/Navbar'
 
 export default class Home extends Component {
+
+    state = {
+        interval: null
+    }
 
     deleteSpan = phrase => { //Funcao para deletar frase do dom
         let span = document.querySelector('span').innerHTML        
@@ -31,15 +35,18 @@ export default class Home extends Component {
         let span = document.querySelector('div span#text')
         let j = 0 //Contador para verificar se a frase ja chegou no final
         const title = titles[phrase]
-        const lenghtTitle = title.length
-        const interval = setInterval(() => {
-            span.innerHTML += title[j] //Adicionando letra no dom
-            j++
-            if (j >= lenghtTitle) { //Se a frase chegou no final o intervalo e interrompido para o span ser deletado na funcao deletespan
-                clearInterval(interval)
-                setTimeout(this.deleteSpan.bind(null, phrase), 2000)
-            }
-        }, 50)
+        const lenghtTitle = title.length;
+        if (span !== null) {
+        this.setState({
+            interval: setInterval(() => {
+                span.innerHTML += title[j] //Adicionando letra no dom
+                j++
+                if (j >= lenghtTitle) { //Se a frase chegou no final o intervalo e interrompido para o span ser deletado na funcao deletespan
+                    clearInterval(this.state.interval)
+                    setTimeout(this.deleteSpan.bind(null, phrase), 2000)
+                }
+            }, 50)
+        })}
     }
 
     componentDidMount() {
@@ -50,10 +57,10 @@ export default class Home extends Component {
         
         return (
             <Container>
-                <img src={logo} alt="Águia" />
                 <ContainerText>
                     <span id="text"> </span>
                 </ContainerText>
+                <Navbar />
             </Container>
         )
     }

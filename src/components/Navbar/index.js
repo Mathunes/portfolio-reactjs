@@ -4,33 +4,42 @@ import IconHome from '../../assets/icons/home.png'
 import IconAbout from '../../assets/icons/about.png'
 import IconProjects from '../../assets/icons/projects.png'
 import IconContacts from '../../assets/icons/contacts.png'
+import { Link } from 'react-router-dom'
 
 
 export default class Navbar extends Component {
     render() {
         return (
             <Container>
+
                 <NavbarContainer>
-                    <FlipContainer>
-                        <Flipper>
-                            <Front>
-                                <img src={IconHome} alt="Home" />
-                            </Front>
-                            <Back>
-                                <span>Home</span>
-                            </Back>
-                        </Flipper>
-                    </FlipContainer>
-                    <FlipContainer>
-                        <Flipper>
-                            <Front>
-                                <img src={IconAbout} alt="Sobre" />
-                            </Front>
-                            <Back>
-                                <span>Sobre</span>
-                            </Back>
-                        </Flipper>
-                    </FlipContainer>
+
+                    <Link to={process.env.PUBLIC_URL + '/'}>
+                        <FlipContainer>
+                            <Flipper>
+                                <Front>
+                                    <img src={IconHome} alt="Home" />
+                                </Front>
+                                <Back>
+                                    <span>Home</span>
+                                </Back>
+                            </Flipper>
+                        </FlipContainer>
+                    </Link>
+
+                    <Link to={process.env.PUBLIC_URL + '/about'}>
+                        <FlipContainer>
+                            <Flipper>
+                                <Front>
+                                    <img src={IconAbout} alt="Sobre" />
+                                </Front>
+                                <Back>
+                                    <span>Sobre</span>
+                                </Back>
+                            </Flipper>
+                        </FlipContainer>
+                    </Link>
+
                     <FlipContainer>
                         <Flipper>
                             <Front>
@@ -52,6 +61,7 @@ export default class Navbar extends Component {
                         </Flipper>
                     </FlipContainer>
                 </NavbarContainer>
+
             </Container>
         )
     }

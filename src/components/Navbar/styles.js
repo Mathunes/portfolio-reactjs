@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const Container = styled.div`
     background-color: #171515;
     height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 
     @media (max-width: 600px) {
         height: 55px;

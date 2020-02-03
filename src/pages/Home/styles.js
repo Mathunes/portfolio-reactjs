@@ -16,45 +16,6 @@ export const Container = styled.div`
         height: calc(100vh - 55px);
     }
 
-    img {
-        position: absolute;
-        width: 50px;
-        margin-top: 20px;
-        
-        @media (max-width: 600px) {
-            & {
-                width: 35px;
-            }
-        }
-
-        &:hover {
-            animation-name: fly;
-            animation-iteration-count: infinite;
-            animation-duration: .9s;
-        }
-
-        @keyframes fly {
-            0% {
-                margin-top: 20px;
-            }
-
-            25% {
-                margin-top: 10px;
-            }
-
-            50% {
-                margin-top: 20px;
-            }
-
-            75% {
-                margin-top: 30px;
-            }
-
-            100% {
-                opacity: 20%;
-            }
-        }
-    }
 `
 
 export const ContainerText = styled.div`
