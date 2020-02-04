@@ -42,6 +42,7 @@ export const ContainerProjects = styled.div`
     a {
         width: 40%;
         margin: 20px;
+        position: relative;
 
         @media (max-width: 850px) {
             & {
@@ -57,6 +58,40 @@ export const ContainerProjects = styled.div`
                 cursor: pointer;
             }
         }
+    }
+
+`
+
+export const HoverProject = styled.div`
+    padding: 0 40px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all .1s;
+    transition: background-color .2s;
+
+    h2 {
+        font-weight: normal;
+    }
+
+    span {
+        font-weight: lighter;
+        text-transform: none;
+    }
+
+    &:hover {
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.9);
     }
 
 `
