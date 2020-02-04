@@ -92,6 +92,19 @@ export const HoverProject = styled.div`
     &:hover {
         font-size: 16px;
         background-color: rgba(0, 0, 0, 0.9);
+
+        
+    @media (max-width: 600px) {
+            & {
+                h2 {
+                    font-size: 14px;
+                }
+
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
     }
 
 `

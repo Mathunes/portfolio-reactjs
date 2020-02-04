@@ -36,17 +36,15 @@ export const ContainerText = styled.div`
     height: 100%;
     justify-content: center;
     padding-bottom: 70px;
+    text-align: center;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 36px;
+    font-weight: lighter;
 
-    span {
-        color: #ffffff;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        text-align: center;
-        font-size: 36px;
-        font-weight: normal;
-
-        @media(max-width: 600px) {
-            font-size: 26px;
-        }
-
+    @media(max-width: 600px) {
+        font-size: 26px;
     }
+
 `
