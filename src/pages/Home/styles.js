@@ -48,23 +48,5 @@ export const ContainerText = styled.div`
             font-size: 26px;
         }
 
-        &::after {
-            content: '|';
-            font-weight: normal;
-            animation-name: insertion-point;
-            animation-iteration-count: infinite;
-            animation-duration: 0.6s;
-        }
-
-        @keyframes insertion-point {
-            0% {
-                opacity: 0%;
-            }
-
-            100% {
-                opacity: 100%;
-            }
-        }
-
     }
 `
