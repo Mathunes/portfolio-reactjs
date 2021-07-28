@@ -30,7 +30,7 @@ export const ContainerProjects = styled.div`
     justify-content: space-around;
     align-items: center;
     background-color: #000000;
-    margin-bottom: 90px;
+    padding-bottom: 90px;
     z-index: 1;
 
     @media (max-width: 600px) {
