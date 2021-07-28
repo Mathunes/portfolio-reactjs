@@ -50,13 +50,13 @@ export default class Projects extends Component {
                             <span>Jogo da memória desenvolvido com JavaScript</span>
                         </HoverProject>
                     </a>
-                    <a href={'https://smashbug.000webhostapp.com/index.php'} target="_blank" rel="noopener noreferrer">
+                    {/* <a href={'https://smashbug.000webhostapp.com/index.php'} target="_blank" rel="noopener noreferrer">
                         <img src={smashBugProject} alt="Projeto smashbug" />
                         <HoverProject>
                             <h2>Jogo SmashBug</h2>
                             <span>Jogo de esmagar insetos desenvolvido com HTML, CSS, JavaScript, JQuery e PHP</span>
                         </HoverProject>
-                    </a>
+                    </a> */}
                     <a href={'https://mathunes.github.io/timeline/'} target="_blank" rel="noopener noreferrer">
                         <img src={timeLineProject} alt="Projeto timeline" />
                         <HoverProject>
