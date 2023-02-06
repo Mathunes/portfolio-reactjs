@@ -15,7 +15,7 @@ export default class About extends Component {
         return (
             <Container>
                 <Picture src={picture} />
-                <p>Sou Matheus Antunes Vieira, estudante de computação - Sistemas de Informação - na Universidade Federal Fluminense. Tenho interesse em desenvolvimento e possuo conhecimento nas tecnologias mencionadas a seguir.</p>
+                <p>Sou Matheus Antunes Vieira, estudante de computação na Universidade Federal Fluminense. Tenho interesse em desenvolvimento e possuo conhecimento nas tecnologias mencionadas a seguir.</p>
                 <ImagesContainer>
                     <img src={htmlIcon} alt="Icone HTML5" />
                     <img src={cssIcon} alt="Icone CSS3" />
